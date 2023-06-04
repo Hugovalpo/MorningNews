@@ -3,6 +3,8 @@ import { addBookmark, removeBookmark } from '../reducers/bookmarks';
 import styles from '../styles/TopArticle.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { dialogShow } from '../reducers/dialogValue';
+
 
 
 function TopArticle(props) {
@@ -12,6 +14,7 @@ function TopArticle(props) {
 
 	const handleBookmarkClick = () => {
 		if (!user.token) {
+			dispatch(dialogShow(true));
 			return;
 		}
 

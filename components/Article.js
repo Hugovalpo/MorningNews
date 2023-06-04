@@ -5,6 +5,8 @@ import styles from "../styles/Article.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { hideArticle } from "../reducers/hiddenArticles";
+import { dialogShow } from '../reducers/dialogValue';
+
 
 function Article(props) {
   const dispatch = useDispatch();
@@ -14,6 +16,7 @@ function Article(props) {
   // can bookmark
   const handleBookmarkClick = () => {
     if (!user.token) {
+      dispatch(dialogShow(true));
       return;
     }
     fetch(`http://localhost:3000/users/canBookmark/${user.token}`)

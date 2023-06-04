@@ -4,10 +4,12 @@ import Head from "next/head";
 import Article from "./Article";
 import TopArticle from "./TopArticle";
 import styles from "../styles/Home.module.css";
+import Dialog from "./Dialog";
 
 function Home() {
   const bookmarks = useSelector((state) => state.bookmarks.value);
   const hiddenArticles = useSelector((state) => state.hiddenArticles.value);
+  const dialog = useSelector((state) => state.dialogValue.value);
 
   const [articlesData, setArticlesData] = useState([]);
   const [topArticle, setTopArticle] = useState({});
@@ -29,7 +31,6 @@ function Home() {
     const isHidden = hiddenArticles.some(
       (hidden) => hidden.title === data.title
     );
-  
 
     return (
       <Article
@@ -61,11 +62,12 @@ function Home() {
 
   return (
     <div>
+      {dialog && <Dialog />}
       <Head>
         <title>Morning News - Home</title>
       </Head>
-      {topArticles}
-      <div className={styles.articlesContainer}>{articles}</div>
+        {topArticles}
+       <div className={styles.articlesContainer}>{articles}</div>
     </div>
   );
 }
