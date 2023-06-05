@@ -27,7 +27,7 @@ function Header() {
 	}, []);
 
 	const handleRegister = () => {
-		fetch('http://localhost:3000/users/signup', {
+		fetch(`${process.env.BACKEND_ADDRESS}/users/signup`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ username: signUpUsername, password: signUpPassword }),
@@ -44,7 +44,7 @@ function Header() {
 
 	const handleConnection = () => {
 
-		fetch('http://localhost:3000/users/signin', {
+		fetch(`${process.env.NEXT_PUBLIC_BACKEND_ADDRESS}/users/signin`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ username: signInUsername, password: signInPassword }),

@@ -14,11 +14,14 @@ import { persistStore, persistReducer } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import storage from "redux-persist/lib/storage";
 
-// const store = configureStore({
-//   reducer: { bookmarks, user },
-// });
 
-const reducers = combineReducers({ bookmarks, user, hiddenArticles, dialogValue });
+const reducers = combineReducers({
+  bookmarks,
+  user,
+  hiddenArticles,
+  dialogValue,
+});
+
 const persistConfig = { key: "morningnews", storage };
 
 const store = configureStore({
@@ -29,7 +32,9 @@ const store = configureStore({
 
 const persistor = persistStore(store);
 
+
 function App({ Component, pageProps }) {
+  
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
