@@ -32,4 +32,4 @@ Backend:
 
 ## Launch
 
- Coming Soon :)
+https://morning-news-azure.vercel.app/
