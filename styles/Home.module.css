@@ -1,3 +1,10 @@
+.topArticle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 120px;
+}
+
 .articlesContainer {
 	display: flex;
 	flex-wrap: wrap;

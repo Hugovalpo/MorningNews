@@ -11,6 +11,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: fixed;
+	top:0;
+	left:0;
+	z-index:1;
+	background-color: white;
 }
 
 .title {
@@ -101,4 +106,5 @@
 
 .showIcon {
 	cursor: pointer;
+	
 }

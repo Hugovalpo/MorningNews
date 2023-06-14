@@ -66,7 +66,9 @@ function Home() {
       <Head>
         <title>Morning News - Home</title>
       </Head>
-        {topArticles}
+      <div className={styles.topArticle}>
+         {topArticles}
+      </div>
        <div className={styles.articlesContainer}>{articles}</div>
     </div>
   );
