@@ -1,7 +1,7 @@
 # MorningNews
 
 ## Description
-This project was developed as part of a bootcamp training at the capsule, for some time I have modified it in some aspects to change its appearance and functionality
+This project was developed as part of a bootcamp training at La Capsule, for some time I have modified it in some aspects to change its appearance and functionality
 
 ## Technologies
 
@@ -14,7 +14,7 @@ Front:
 Back:
 
 + Express
-+ JavaScript
++ MongoDB
 
 ## Goals
 
@@ -29,7 +29,9 @@ Frontend:
 Backend:
 
 + Api's 
++ Sign-Up/Sign-In
++ BD in MongoDB
 
 ## Launch
 
- Coming Soon :)
+https://morning-news-azure.vercel.app/
